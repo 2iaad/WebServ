@@ -2,7 +2,7 @@
 
 #include "Post.hpp"
 #include "../allincludes.hpp"
-#include "../pars_config/config.hpp"
+#include "../ParseConfig/config.hpp"
 
 #define MAX_HEADER_SIZE	8000
 #define BUFFER_SIZE		80000

@@ -2,7 +2,7 @@
 
 #define BACKLOG 128
 
-#include "../pars_config/config.hpp"
+#include "../ParseConfig/config.hpp"
 #include "../Request/Request.hpp"
 #include "../Response/responseHeader.hpp"
 

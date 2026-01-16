@@ -1,8 +1,5 @@
-#include "./pars_config/config.hpp"
+#include "./ParseConfig/config.hpp"
 #include "./AllServer/HttpServer.hpp"
-
-
-
 
 int ConfigeFileFunc(std::string ConfigFilePath, std::vector<ConfigNode> &ConfigPars)
 {
