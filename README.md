@@ -1,6 +1,7 @@
 <div align="center">
 
 # 🌐 Webserv — HTTP Server in C++
+## Overview
 
 This project implements a fully functional HTTP server in C++ from the ground up. It supports core HTTP methods (GET, POST, DELETE), CGI execution, file uploads, auto-indexing, custom error pages, and persistent connections. The server is built using kqueue-driven non-blocking I/O for high concurrency and efficiency.
 
