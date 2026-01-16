@@ -89,37 +89,41 @@ Here’s how I have built the server end‑to‑end using kqueue‑driven non‑
     - Otherwise, I close the connection via `RemoveClient`.
 - I use focused helpers for streaming: `Response::sendHeaders`, `Response::sendFile`, `Response::sendBody`, and `Response::sendCgiScript`. CGI/timer events surface in `HttpServer::run` and I handle them in `handle_cgi_exit` / `handle_cgi_timeout`. The per‑connection bookkeeping lives in `EventContext` (see [AllServer/HttpServer.hpp](AllServer/HttpServer.hpp)).
 
+
+<div align="center">
+
 ## How to test the project
 
-- Build with [Makefile](Makefile), then run the server using my config ([config.conf](config.conf)):
+#### Build with [Makefile](Makefile), then run the server using my config ([config.conf](config.conf)):
   
 ```sh
-make
-./webserv config.conf
+make && ./webserv config.conf
 ```
 
-- Basic GET (autoindex or index page):
+#### Basic GET (autoindex or index page):
   
 ```sh
 curl -v http://localhost:8080/
 ```
 
-- Serve a static file:
+#### Serve a static file:
   
 ```sh
 curl http://localhost:8080/README.md
 ```
 
-- Upload a file (multipart POST to a directory path):
+#### Upload a file (multipart POST to a directory path):
   
 ```sh
 curl -F "file=@Assets/socket.png" http://localhost:8080/
 ```
 
-- Delete a file:
+#### Delete a file:
 
 ```sh
 curl -X DELETE http://localhost:8080/socket.png
 ```
 
-Tip: Your can try in a browser too (preferably Chrome), Enjoy sa7bi ;).
+### Tip: Your can try in a browser too (preferably Chrome), Enjoy sa7bi ;)
+
+</div>
